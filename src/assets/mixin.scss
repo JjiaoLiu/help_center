@@ -1,0 +1,7 @@
+@function px2vw($size: 14px, $width: 1080px) {
+  @if (type-of($size) == "number" and unit($size) == "px") {
+    @return $size * 100vw / $width;
+  } @else {
+    @return $size;
+  }
+}
